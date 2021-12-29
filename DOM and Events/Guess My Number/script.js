@@ -8,8 +8,7 @@
 // console.log(document.querySelector(".guess").value);
 // document.querySelector(".guess").value = 15;
 
-const secretNumber = Math.trunc(Math.random() * 100 + 1);
-console.log(secretNumber);
+let secretNumber = Math.trunc(Math.random() * 100 + 1);
 let score = 20;
 let highscore = 0;
 
@@ -67,6 +66,7 @@ document.querySelector(".check").addEventListener("click", function () {
 });
 // if user clicks again button
 document.querySelector(".again").addEventListener("click", function () {
+  secretNumber = Math.trunc(Math.random() * 100 + 1);
   score = 20;
   document.querySelector(".score").textContent = score;
   document.querySelector("body").style.backgroundColor = "#222";
