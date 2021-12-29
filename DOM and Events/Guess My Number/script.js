@@ -16,7 +16,8 @@ document.querySelector(".check").addEventListener("click", function () {
   const guess = Number(document.querySelector(".guess").value);
   // if user have score more than 0, he/she can play
   if (score) {
-    if (!guess) document.querySelector(".message").textContent = "No number!";
+    if (!guess)
+      document.querySelector(".message").textContent = "⛔️ No number!";
     // When player wins
     else if (guess === secretNumber) {
       document.querySelector(".number").textContent = secretNumber;
@@ -60,7 +61,7 @@ document.querySelector(".check").addEventListener("click", function () {
   } else {
     document.querySelector(".score").textContent = score;
     document.querySelector(".number").textContent = secretNumber;
-    document.querySelector(".message").textContent = "You lost the game!";
+    document.querySelector(".message").textContent = "🥴 You lost the game!";
     document.querySelector("body").style.backgroundColor = "#420D09";
   }
 });
@@ -70,7 +71,7 @@ document.querySelector(".again").addEventListener("click", function () {
   score = 20;
   document.querySelector(".score").textContent = score;
   document.querySelector("body").style.backgroundColor = "#222";
-  document.querySelector(".message").textContent = "Start guessing...";
+  document.querySelector(".message").textContent = "❔ Start guessing...";
   document.querySelector(".number").style.width = "15rem";
   document.querySelector(".guess").value = "";
   document.querySelector(".number").textContent = "?";
